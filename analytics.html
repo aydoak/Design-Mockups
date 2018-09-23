@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Analytics</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', ''],
+          ['May 1',  42],
+          ['',  36],
+          ['',  44],
+          ['',  41],
+          ['',  53],
+          ['',  57],
+          ['',  48],
+          ['May 8',  36],
+          ['',  56],
+          ['',  48],
+          ['',  44],
+          ['',  61],
+          ['',  44],
+          ['',  52],
+          ['May 15',  63],
+          ['',  68],
+          ['',  39],
+          ['',  36],
+        ]);
+
+        var options = {
+          title: 'Daily Viewer Minutes',
+          hAxis: {title: '',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+   <!--  <style type="text/css">
+    	@media screen and (max-width: 400px) {
+	#chart_div{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 500px) {
+	#chart_div{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 600px) {
+	#chart_div{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+	#chart_div{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 800px) {
+	#chart_div{
+		width: 100%;
+	}
+}
+    </style> -->
+
+	</head>
+
+	<body>
+
+		<header>
+			<span class="farts">
+				<div class="header">
+					<h1>
+						Analytics
+					</h1>
+				</div>
+			</span>
+			<span class="right">
+				<button type="button" onclick="alert('I don\'t do anything!')">Return to Channel
+				</button>
+			</span>
+		</header>
+
+		<section class="s1">
+			<div class="s1d1">
+				<span class="s1sp1">
+					<div class="container">
+					  <div class="switch">
+					    <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+					    <label for="week" class="switch-label switch-label-off">
+					    	Week
+					    </label>
+					    <input type="radio" class="switch-input" name="view" value="month" id="month">
+					    <label for="month" class="switch-label switch-label-on">
+					    	Month
+					    </label>
+					    <span class="switch-selection"></span>
+					  </div>
+					</div>
+				</span>
+				<span class="drop_down">
+					<div class="styled-select">
+					   <select>
+					      <option>04/17/2011-05/16/2011</option>
+					      <option>03/17/2011-04/16/2011</option>
+					      <option>02/17/2011-03/16/2011</option>
+					   </select>
+					</div>
+					<!-- <div class="drop_down">
+						04/17/2011 - 05/16/2011
+					</div> -->
+				</span>
+			</div>
+			<div class="line_chart">
+				<img src="line_chart.png" alt="Line chart">
+			</div>	
+			<!-- <div class="line_graph">
+				<div id="chart_div" style="width: 100%; height: 25em;"></div>
+			</div> -->
+		</section>
+
+		<section class="s2">
+			<h3>
+				Overview
+			</h3>
+			<table class="overview">
+				<table style="width:100%">
+				  <tr>
+				    <td>Total Viewer Minutes</td>
+				    <td class="val">4,288 <span class="up">&uarr; 25%</span></td>
+				  </tr>
+				  <tr>
+				    <td>Total Streams</td>
+				    <td class="val">1,215 <span class="up">&uarr; 5%</span></td>
+				  </tr>
+				  <tr>
+				    <td>Average Time per Viewer</td>
+				    <td class="val">00:00:54 <span class="down">&darr; 5%</span></td>
+				  </tr>
+				  <tr>
+				  	<td>Total Unique Viewers</td>
+				  	<td class="val">655 <span class="down">&darr; 1%</span></td>
+				  </tr>
+				  <tr>
+				  	<td>% New Users</td>
+				  	<td class="val">54 <span class="up">&uarr; 2%</span></td>
+				  </tr>
+				</table> 
+			</table>
+		</section>
+
+		<section class="s3">
+			<div class="s3d1">
+				<span class="s3d1s1">
+					<h3>
+						Geolocation
+					</h3>
+				</span>
+				<span class="s3d1s2">
+					<a href="#">View Full Report</a>
+				</span>
+			</div>
+			<div>
+				<table>
+					<table style="width:100%">
+				  <tr class="streams_bar">
+				  	<th class="streams_bar">Streams by Country<!--img src="pie.png" alt="Pie Chart" class="pie"--></th>
+				    <th>Country/Territory</th>
+				    <th>Streams</th>
+				  </tr>
+				  <tr>
+				  	<td rowspan= "8"><img src="pie.png" alt="Pie Chart" class="pie"></td>
+				    <td class="bluedad">
+				    	<div class="bluedad2">
+				    		<span>
+				    			<div class="bluebox"></div>
+				    		</span>
+				    		<span class="us">
+				    			United States 52%
+				    		</span>
+				    	</div>
+				    </td>
+				    <td>314</td>
+				  </tr>
+				  <tr>
+				  	<td><img src="redbox.png" alt="red icon" class="redbox"> Indonesia 12%</td>
+				    <td>64</td>
+				  </tr>
+				  <tr>
+				  	<td><img src="orangebox.png" alt="orange icon" class="orangebox"> India 12%</td>
+				    <td>51</td>
+				  </tr>
+				  <tr>
+				  	<td><img src="greenbox.png" alt="green icon" class="greenbox"> United Kingdom 10%</td>
+				    <td>47</td>
+				  </tr>
+				  <tr>
+				  	<td><img src="purplebox.png" alt="purple icon" class="purplebox"> Mexico 6%</td>
+				    <td>44</td>
+				  </tr>
+				  <tr>
+				  	<td><img src="skybox.png" alt="sky icon" class="skybox"> Spain 4%</td>
+				    <td>37</td>
+				  </tr>
+				  <tr>
+				    <td><img src="pinkbox.png" alt="pink icon" class="pinkbox"> Turkey 4%</td>
+				    <td>34</td>
+				  </tr>
+					</table> 
+				</table>
+			</div>
+		</section>
+		<div class="views">
+			<span class="video">	
+				<section class="section4">
+					<div class="s4d1">
+						<span class="s4d1s1">
+							<h3>
+								Video Views
+							</h3>
+						</span>
+						<span class="s4d1s2">
+							<a href="#">View Full Report</a>
+						</span>
+					</div>
+					<table>
+						<table style="width:100%">
+						  <tr class="streams_bar">
+						  	<th class="Video">Video Title<!--img src="pie.png" alt="Pie Chart" class="pie"--></th>
+						    <th>Views</th>
+						  </tr>
+						  <tr>
+						  	<td>Music Showreel</td>
+						    <td>556</td>
+						  </tr>
+						  <tr>
+						  	<td>Livestream Production Music Showreel%</td>
+						    <td>537</td>
+						  </tr>
+						  <tr>
+						  	<td>Livestream - Facebook Promo</td>
+						    <td>453</td>
+						  </tr>
+						  <tr>
+						  	<td>Facebook Promo</td>
+						    <td>421</td>
+						  </tr>
+						  <tr>
+						  	<td>Music Showreel</td>
+						    <td>28</td>
+						  </tr>
+						  <tr>
+						    <td>Livestream Facebook Promo</td>
+						    <td>2</td>
+						  </tr>
+						  <tr>
+						  	<td>Complete Livestream Showreel</td>
+						  	<td>1</td>
+						  </tr>
+						</table> 
+					</table>
+				</section>
+			</span>
+			<span class="post">
+				<section class="section5">
+					<div class="s4d2">
+						<span class="s4d2s1">
+							<h3>
+								Post Views
+							</h3>
+						</span>
+						<span class="s4d2s2">
+							<a href="#">View Full Report</a>
+						</span>
+					</div>
+					<table>
+						<table style="width:100%">
+						  <tr class="streams_bar">
+						  	<th class="Video">Post Title<!--img src="pie.png" alt="Pie Chart" class="pie"--></th>
+						    <th>Views</th>
+						  </tr>
+						  <tr>
+						  	<td>Music Showreel</td>
+						    <td>556</td>
+						  </tr>
+						  <tr>
+						  	<td>Livestream Production Music Showreel%</td>
+						    <td>537</td>
+						  </tr>
+						  <tr>
+						  	<td>Livestream - Facebook Promo</td>
+						    <td>453</td>
+						  </tr>
+						  <tr>
+						  	<td>Facebook Promo</td>
+						    <td>421</td>
+						  </tr>
+						  <tr>
+						  	<td>Music Showreel</td>
+						    <td>28</td>
+						  </tr>
+						  <tr>
+						    <td>Livestream Facebook Promo</td>
+						    <td>2</td>
+						  </tr>
+						  <tr>
+						  	<td>Complete Livestream Showreel</td>
+						  	<td>1</td>
+						  </tr>
+						</table>
+					</table>
+				</section>
+			</span>
+		</div>
+	</body>
+</html>
+
+
+
